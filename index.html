@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercice 17</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body>
+    <div id="formBox">
+        <h2>Formulaire de réservation :</h2>
+            <p>(*= champs obligatoire)</p>
+        <br>
+        <form id="monForm" name="monForm" enctype="text/plain" method="post" action="mailto:monmail@monserveur.com?subject=contact" novalidate>
+            <ul>
+                <li><label for="nom">Nom :*</label>
+                    <input type="text" name="nom" id="nom" required autofocus placeholder="Votre nom ici"></li>
+                <li><label for="prenom">Prénom :</label>
+                    <input type="text" name="prenom" id="prenom" placeholder="Votre prénom ici"></li>
+                <li><label for="tel">Téléphone :</label>
+                    <input type="tel" name="tel" id="tel" placeholder="0123456789" maxlength="10" pattern="[0-9]{10}"></li>
+                <li><label for="mail">Email :*</label>
+                    <input type="email" name="mail" id="mail" required placeholder="xxx@yyyy.zzz"></li>
+                <li><label for="ld1">Votre réservation est pour :</label>
+                <select name="ld1" id="ld1">
+                    <option value="dj">Demi-journée</option>
+                    <option value="journee">Journée</option>
+                    <option value="repas">Repas</option>
+                </select>
+                <input type="text" name="quant1" id="quant1" class="nbpers" placeholder="Qté">
+                <input type="text" name="st1" id="st1" class="sousTt" placeholder="Sous-total HT" readonly></li>
+                <li><label for="ld2"></label>
+                <select name="ld2" id="ld2">
+                    <option value="dj">Demi-journée</option>
+                    <option value="journee">Journée</option>
+                    <option value="repas">Repas</option>
+                </select>
+                <input type="text" name="quant2" id="quant2" class="nbpers" placeholder="Qté">
+                <input type="text" name="st2" id="st2" class="sousTt" placeholder="Sous-total HT" readonly></li>
+                <li><label for="ld3"></label>
+                <select name="ld3" id="ld3">
+                    <option value="dj">Demi-journée</option>
+                    <option value="journee">Journée</option>
+                    <option value="repas">Repas</option>
+                </select>
+                <input type="text" name="quant3" id="quant3" class="nbpers" placeholder="Qté">
+                <input type="text" name="st3" id="st3" class="sousTt" placeholder="Sous-total HT" readonly></li>
+                <li><label for="stHT">Sous-total HT:</label>
+                    <input type="text" name="stHT" id="stHT" placeholder="Sous-total HT" readonly>
+                euros </li>
+                <li><label for="ttc">Total TTC (TVA 20%):</label>
+                    <input type="text" name="ttc" id="ttc" placeholder="Total TTC" readonly>
+                euros </li>
+                <li><label id="labelCg" for="cG">J'accepte les conditions générales*</label>
+                    <input type="checkbox" name="cG" id="cG"></li>
+                    <li><button type="button" class="texte" id="verif">Vérifier avant envoie</button>
+                    <button type="button" class="texte" id="imp">Imprimer</button>
+                    <button type="reset" class="texte" id="sup">Réinitialiser</button>
+                    <button type="button" class="texte" id="envoyer">Envoyer ma commande</button></li>
+            </ul>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

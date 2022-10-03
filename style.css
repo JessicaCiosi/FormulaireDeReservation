@@ -1,0 +1,38 @@
+#formBox {
+    border: 1px solid grey;
+    border-radius: 10px;
+    width: 780px;
+    padding-bottom: 10px;
+}
+
+p {
+    margin: 0;
+}
+
+#formBox ul li {
+    list-style-type: none;
+    text-align: left;
+    margin-bottom: 5px;
+}
+
+label {
+    display: inline-block;
+    width: 240px;
+    font-weight: bold;
+}
+
+input, select {
+    border-radius: 9px;
+}
+
+button {
+    margin-top: 20px;
+    position: relative;
+    transform: translateX(140px);
+    -webkit-transform: translateX(140px);
+}
+
+@page {size: landscape;}
+
+
+
